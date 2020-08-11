@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #eeeeee; */
+    user-select: none;
+    color: #1B3409;
+}
+
+body,
+p,
+h1 {
+    transition: 1s;
+}
+
+.display-body {
+    width: 100%;
+}
+
+
+h1 {
+    position: absolute;
+    display: block;
+    width: 40%;
+    font-size: 5vw;
+    padding: 0.4%;
+    top: 20%;
+    left: 25%;
+    margin-left: -20%;
+    text-align: center;
+    color: #5dbe0d;
+    text-shadow: 1px 1px 3px #1e3d00;
+    /* background-color: lightblue; */
+}
+
+#date {
+    position: absolute;
+    display: block;
+    width: 24%;
+    font-size: 2.5vw;
+    padding: 0.4%;
+    top: 40%;
+    left: 25%;
+    margin-left: -12%;
+    text-align: center;
+}
+
+#lunch {
+    position: absolute;
+    /* background-color: lightgreen; */
+}
+
+
+.darkmode-btn-phone-fix {
+    display: none;
+    position: absolute;
+    margin: 50px;
+    padding: 20px;
+    width: 80px;
+    height: 40px;
+}
+
+@media only screen and (orientation: portrait) {
+    .darkmode-btn-phone-fix {
+        display: block;
+    }
+}
+
+.darkmode-btn #moon {
+    display: none;
+}
+
+.darkmode-btn #sun {
+    display: inline;
+    animation: fade-in 1s;
+}
+
+.darkmode-btn-on #moon {
+    display: inline;
+    animation: fade-in 1s;
+}
+
+.darkmode-btn-on #sun {
+    display: none;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.darkmode-btn {
+    position: absolute;
+    display: block;
+    padding: 20px;
+    width: 80px;
+    height: 40px;
+    left: 33%;
+    top: 61.5%;
+}
+
+.darkmode-btn-on {
+    margin-left: 40px;
+}
+
+.darkmode-btn-placeholder {
+    position: absolute;
+    background-color: #ebebeb;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.darkmode-btn-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #9c9c9c;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.darkmode-btn-circle i {
+    position: absolute;
+    color: White;
+    font-size: 30px;
+    margin: 9.5px;
+}
+
+.darkmode-text {
+    position: absolute;
+    display: block;
+    width: 30%;
+    font-size: 30px;
+    padding: 0.4%;
+    left: 25%;
+    margin-top: 30%;
+    margin-left: -25%; /* -10% */
+    text-align: center;
+}
+
+
+/* Dark UI */
+
+.darkmode {
+    background-color: black;
+    transition: 1s;
+}
+
+.darkmode p,
+.darkmode h1 {
+    color: lightgray;
+}
+
+.darkmode #date {
+    background-color: #52752a;
+}
+
+.darkmode .darkmode-btn-placeholder {
+    background-color: #2c2c2c;
+}
+
+.darkmode .darkmode-btn-circle {
+    background-color: #575757;
+}
+
+.darkmode .darkmode-btn-circle i {
+    color: lightgray;
+}
