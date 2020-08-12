@@ -12,31 +12,31 @@
 </head>
 
 <body id="body" onload="Load()">
-    <table>
-        <tr>
-            <td class="left-half">
-                <!-- <h1>Mi az ebéd?</h1> -->
-                <p class="asd">asd</p>
-                asd
-            </td>
-            <td class="right-half"></td>
-        </tr>
-    </table>
-    <div class="display-body">
+<table class="aligner-table">
+    <td>
+        <h1>Mi az ebéd?</h1>
         <p id="date"></p>
-        <p class="darkmode-text">Darkmode:</p>
-        <div onclick="Darkmode()" class="darkmode-btn">
-            <div class="darkmode-btn-placeholder"></div>
-            <div class="darkmode-btn-circle" id="darkmode-btn">
-                <i class="fas fa-moon" id="moon"></i>
-                <i class="fas fa-sun" id="sun"></i>
+        <div class="darkmode-switch">
+            <p class="darkmode-text">Darkmode:</p>
+            <div onclick="Darkmode()" class="darkmode-btn">
+                <div class="darkmode-btn-placeholder"></div>
+                <div class="darkmode-btn-circle" id="darkmode-btn">
+                    <i class="fas fa-moon" id="moon"></i>
+                    <i class="fas fa-sun" id="sun"></i>
+                </div>
             </div>
         </div>
-        <div onclick="Darkmode()" class="darkmode-btn-phone-fix"></div>
-        <p id="lunch"></p>
+        
         <div id="back"></div>
         <div id="next"></div>
-    </div>
+    </td>
+    <td>
+        <p id="lunch"></p>
+    </td>
+</table>
+    <!-- <div class="display-body">
+        <div onclick="Darkmode()" class="darkmode-btn-phone-fix"></div>
+    </div> -->
 </body>
 
 </html>
