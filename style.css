@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #d2dad0;
-    /* background-color: #d0d5da; */
     user-select: none;
     color: #1B3409;
     overflow: hidden;
@@ -48,7 +47,6 @@ h1 {
     padding: 20px;
     font-size: 5vw;
     color: #5dbe0d;
-    /* background-color: tomato; */
     background-color: #fbf9f6;
     text-shadow: 0.06vw 0.06vw 0.2vw #1e3d00;
     box-shadow: #00000063 0.2vw 0.2vw 10px;
@@ -73,7 +71,12 @@ h1 {
     height: 20vw;
     font-weight: bold;
     font-size: 2vw;
+    user-select: text;
 }
+
+/* #lunch::selection {
+    background-color: yellow;
+} */
 
 .arrow {
     display: inline-block;
@@ -130,18 +133,50 @@ h1 {
 
 
 .info-button {
-    /* background-color: tomato; */
     background-color: #fbf9f6;
     position: absolute;
-    text-align: center;
+    padding-left: 0.8vw;
     width: 4vw;
     height: 4vw;
-    bottom: 0;
-    left: 0.5vw;
-    margin: 2vw;
+    top: 77%;
+    left: 10%;
+    transform: translate(-50%, -50%);
     font-size: 2vw;
     border-radius: 2vw;
     cursor: pointer;
+    transition: .6s;
+}
+
+.info-button:hover {
+    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    width: 16vw;
+    margin-left: 6vw;
+    transition: .2s;
+}
+
+.info-button div {
+    position: absolute;
+    display: none;
+    margin-left: 1vw
+}
+
+.info-button:hover div {
+    display: inline;
+    animation: info-text-hover 1s;
+}
+
+@keyframes info-text-hover {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
