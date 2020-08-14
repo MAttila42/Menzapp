@@ -1,11 +1,13 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #eeeeee; */
+    font-family: sans-serif;
+    background-color: #d2dad0;
     user-select: none;
     color: #1B3409;
     overflow: hidden;
 }
+
+/* https://fonts.google.com/specimen/Roboto#standard-styles */
 
 body,
 p,
@@ -13,8 +15,16 @@ h1 {
     transition: 1s;
 }
 
-.display-body {
-    width: 100%;
+.big-card {
+    position: fixed;
+    border-radius: 2vw;
+    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    background-color: #eeeeee;
+    width: 90%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -33,10 +43,15 @@ h1 {
 
 h1 {
     display: inline-block;
-    margin: 5px;
+    margin: 30px;
+    padding: 20px;
     font-size: 5vw;
     color: #5dbe0d;
-    text-shadow: 1px 1px 3px #1e3d00;
+    /* background-color: tomato; */
+    background-color: #fbf9f6;
+    text-shadow: 0.06vw 0.06vw 0.2vw #1e3d00;
+    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    border-radius: 1vw;
 }
 
 #date {
@@ -52,9 +67,61 @@ h1 {
     vertical-align: middle;
     background-color: #fbf9f6;
     border-radius: 5px;
-    box-shadow: #00000063 5px 5px 10px;
+    box-shadow: #00000063 0.3vw 0.3vw 10px;
     width: 40vw;
     height: 20vw;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.arrow {
+    display: inline-block;
+    width: 6vw;
+    margin-top: 20px;
+}
+
+#back {
+    text-align: left;
+}
+
+#next {
+    text-align: right;
+}
+
+.arrow a {
+    display: inline-block;
+    width: 1.4vw;
+    height: 1.4vw;
+    border-bottom: 0.6vw solid #1B3409;
+    border-left: 0.6vw solid #1B3409;
+    transition: 0.2s;
+}
+
+.arrow a:before {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    top: -35%;
+    right: -35%;
+    width: 250%;
+    height: 250%;
+}
+
+.arrow a.useful {
+    cursor: pointer;
+}
+
+.arrow a.useful:hover {
+    border-color: #49940b;
+    box-shadow: #1B3409 -0.3vw 0.3vw;
+}
+
+#back a {
+    transform: rotate(45deg);
+}
+
+#next a {
+    transform: rotate(-135deg);
 }
 
 

@@ -27,13 +27,15 @@ function LunchDisplay(x) {
     document.getElementById("date").innerText = today + " " + day;
     document.getElementById("lunch").innerText = lunch[today];
 
-    if (today == "2020. 2. 8.") {
-        document.getElementById("back").innerHTML = '<a>Hátra</a>';
+    if (today == "2020. 8. 11.") {
+        document.getElementById("back").innerHTML = '<a></a>';
+        document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
     } else if (today == lastDay) {
-        document.getElementById("next").innerHTML = '<a>Előrre</a>';
+        document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+        document.getElementById("next").innerHTML = '<a></a>';
     } else {
-        document.getElementById("back").innerHTML = '<a onclick="LunchDisplay(-1)">Hátra</a>';
-        document.getElementById("next").innerHTML = '<a onclick="LunchDisplay(+1)">Előrre</a>';
+        document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+        document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
     }
 }
 
