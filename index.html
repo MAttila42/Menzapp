@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi az ebéd?</title>
+    <title>Menzapp</title>
     <script src="https://kit.fontawesome.com/8790abaace.js" crossorigin="anonymous"></script>
     <link id="css" rel="stylesheet" href="style.css">
     <script src="main.js"></script>
@@ -43,11 +43,27 @@
         </td>
     </table>
     <div id="info">
-        <div class="aligner">
-            <div class="container">
-                asd
-            </div> 
+        <div class="container">
+            <div class="aligner">
+                <table class="close-button" onclick="Info()">
+                    <td>×</td>
+                </table>
+            </div>
+            <div class="title">Információk</div>
+            <div class="darkmode-btn-container">
+                <div class="darkmode-btn-text">Sötét téma:</div>
+                <div id="darkmode-btn" class="darkmode-btn">
+                    <div onclick="Darkmode()" class="line"></div>
+                    <table onclick="Darkmode()">
+                        <td class="circle">
+                            <div class="small-circle"></div>
+                        </td>
+                    </table>
+                </div>
+            </div>
+            <div class="description">A weboldalt készítette: <span class="highlight">Menyhárt Attila</span></div>
         </div>
+        <div class="background-close" onclick="Info()"></div>
     </div>
 </body>
 

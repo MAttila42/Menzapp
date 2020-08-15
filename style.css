@@ -144,7 +144,7 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 2vw;
     border-radius: 2vw;
-    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    box-shadow: #00000063 0.1vw 0.1vw 6px;
     cursor: pointer;
     transition: .6s;
 }
@@ -152,6 +152,7 @@ h1 {
 .info-button:hover {
     width: 16vw;
     margin-left: 6vw;
+    box-shadow: #00000063 0.2vw 0.2vw 10px;
     transition: .2s;
 }
 
@@ -163,23 +164,23 @@ h1 {
 
 .info-button:hover div {
     display: inline;
-    animation: info-text-hover 1s;
+    animation: wait-and-fade-in 1s;
 }
 
-@keyframes info-text-hover {
-    0% {
-        opacity: 0;
-    }
 
-    20% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+#info .container {
+    visibility: hidden;
+    display: inline-block;
+    margin: 3vw;
+    padding: 2vw;
+    width: 35%;
+    color: #1B3409;
+    background-color: #fbf9f6;
+    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    border-radius: 1vw;
+    text-align: left;
+    z-index: 1;
 }
-
 
 #info.show {
     position: absolute;
@@ -188,26 +189,128 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: 1s;
-}
-
-#info.show .aligner {
-    background-color: tomato;
-    position: absolute;
-    width: 100%;
     text-align: center;
+    transition: .5s;
 }
 
 #info.show .container {
+    visibility: visible;
+    animation: fade-in .5s;
+    z-index: 1;
+}
+
+.show .background-close {
+    margin-top: -16%;
+    width: 100%;
+    height: 100%;
+}
+
+.close-button {
     position: absolute;
+    width: 3vw;
+    height: 3vw;
+    right: 30.6%;
+    margin-top: -1.4vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.title {
     display: inline-block;
-    background-color: #fbf9f6;
-    width: 100px;
-    height: 500px;
+    margin-bottom: 2vw;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.3vw;
+}
+
+.highlight {
+    color: #377009;
+    font-weight: bold;
 }
 
 
-.darkmode-btn-phone-fix {
+.darkmode-btn-container {
+    font-size: 1.4vw;
+    margin-bottom: 1.4vw;
+}
+
+.darkmode-btn {
+    position: absolute;
+    width: 35%;
+    margin-top: -1.65%;
+    text-align: right;
+}
+
+.darkmode-btn .line {
+    background-color: #b0b4b2;
+    display: inline-block;
+    margin-right: 1vw;
+    width: 2.6vw;
+    height: 1vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.show .darkmode-btn .line {
+    transition: .6s;
+}
+
+.show .darkmode-btn-on .line {
+    background-color: #49940b;
+}
+
+.darkmode-btn .circle {
+    background-color: #d8dbda;
+    position: absolute;
+    display: inline-block;
+    right: 2.3vw;
+    top: -0.08vw;
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 0.9vw;
+    cursor: pointer;
+}
+
+.show .darkmode-btn .circle {
+    transition: .6s;
+}
+
+.show .darkmode-btn-on .circle {
+    right: 0.5vw;
+    background-color: #b0b4b2;
+}
+
+.darkmode-btn .circle .td {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.darkmode-btn .small-circle {
+    display: inline-block;
+    background-color: #f4f5f4;
+    width: 1vw;
+    height: 1vw;
+    margin-top: 0.4vw;
+    margin-right: 0.4vw;
+    border-radius: 0.5vw;
+}
+
+.show .darkmode-btn .small-circle {
+    transition: .6s;
+}
+
+.show .darkmode-btn-on .small-circle {
+    background-color: #458312;
+}
+
+
+/* .darkmode-btn-phone-fix {
     display: none;
     position: absolute;
     margin: 50px;
@@ -238,16 +341,6 @@ h1 {
 
 .darkmode-btn-on #sun {
     display: none;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 .darkmode-btn {
@@ -300,9 +393,34 @@ h1 {
     font-size: 30px;
     padding: 0.4%;
     left: 25%;
-    margin-top: 30%;
-    margin-left: -25%; /* -10% */
+    margin-top: 30%; */
+    /* margin-left: -25%; -10% */ /*
     text-align: center;
+} */
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wait-and-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
