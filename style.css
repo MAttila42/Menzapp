@@ -170,16 +170,26 @@ h1 {
 #info .container {
     visibility: hidden;
     position: absolute;
-    margin: 3vw 38%;
+    margin: 3vw 36%;
     margin-bottom: 30vw;
-    padding: 2vw;
+    padding: 2vw 2vw 0 2vw;
     width: 24%;
+    max-height: 80%;
     color: #1B3409;
     background-color: #fbf9f6;
     box-shadow: #00000063 0.2vw 0.2vw 10px;
     border-radius: 1vw;
     text-align: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
     z-index: 1;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#info .container::-webkit-scrollbar {
+    display: none;
 }
 
 #info.show {
@@ -190,15 +200,7 @@ h1 {
     left: 0;
     right: 0;
     text-align: center;
-    overflow-y: scroll;
     transition: .5s;
-    
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-#info.show::-webkit-scrollbar {
-    display: none;
 }
 
 #info.show .container {
@@ -270,18 +272,12 @@ h1 {
 }
 
 .text {
-    margin-top: 1vw;
+    margin: 2vw 0;
     color: #6a6b69;
     text-align: center;
     font-size: 1vw;
 }
 
-
-/* .darkmode-btn-container {
-    background-color: tomato;
-    display: inline-block;
-    margin-bottom: 1.4vw;
-} */
 
 .darkmode-btn {
     position: absolute;
