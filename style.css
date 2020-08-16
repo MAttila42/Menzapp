@@ -169,10 +169,11 @@ h1 {
 
 #info .container {
     visibility: hidden;
-    display: inline-block;
-    margin: 3vw;
+    position: absolute;
+    margin: 3vw 38%;
+    margin-bottom: 30vw;
     padding: 2vw;
-    width: 35%;
+    width: 24%;
     color: #1B3409;
     background-color: #fbf9f6;
     box-shadow: #00000063 0.2vw 0.2vw 10px;
@@ -189,17 +190,24 @@ h1 {
     left: 0;
     right: 0;
     text-align: center;
+    overflow-y: scroll;
     transition: .5s;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#info.show::-webkit-scrollbar {
+    display: none;
 }
 
 #info.show .container {
     visibility: visible;
     animation: fade-in .5s;
-    z-index: 1;
 }
 
 .show .background-close {
-    margin-top: -16%;
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -208,15 +216,17 @@ h1 {
     position: absolute;
     width: 3vw;
     height: 3vw;
-    right: 30.6%;
-    margin-top: -1.4vw;
+    top: 0;
+    right: 0;
+    margin: 0.6vw;
     font-size: 2vw;
+    text-align: center;
     cursor: pointer;
 }
 
 .title {
     display: inline-block;
-    margin-bottom: 2vw;
+    margin-bottom: 0.2vw;
     width: 100%;
     text-align: center;
     font-size: 2vw;
@@ -239,15 +249,18 @@ h1 {
     color: #1B3409;
     box-shadow: inset 0 -0.2vw 0 #56a317;
     padding: 0 0.1vw;
+}
+
+.show .link {
     transition: .2s;
 }
 
 .link:hover {
-    box-shadow: inset 0 -1.6vw 0 #66bd1f;
+    box-shadow: inset 0 -1.8vw 0 #89d34c;
 }
 
 .info-line {
-    width: 98%;
+    width: 100%;
 }
 
 .info-line :nth-child(2) {
@@ -256,26 +269,39 @@ h1 {
     text-align: right;
 }
 
-
-.darkmode-btn-container {
-    font-size: 1.4vw;
-    margin-bottom: 1.4vw;
+.text {
+    margin-top: 1vw;
+    color: #6a6b69;
+    text-align: center;
+    font-size: 1vw;
 }
+
+
+/* .darkmode-btn-container {
+    background-color: tomato;
+    display: inline-block;
+    margin-bottom: 1.4vw;
+} */
 
 .darkmode-btn {
     position: absolute;
+    display: inline-block;
     width: 35%;
     margin-top: -1.65%;
     text-align: right;
 }
 
+.dm-btn-m {
+    margin: 1vw 0;
+}
+
 .darkmode-btn .line {
     background-color: #b0b4b2;
-    display: inline-block;
-    margin-right: 1vw;
+    position: absolute;
+    right: 106%;
     width: 2.6vw;
-    height: 1vw;
-    border-radius: 0.5vw;
+    height: 1.2vw;
+    border-radius: 0.6vw;
     cursor: pointer;
 }
 
@@ -288,11 +314,10 @@ h1 {
 }
 
 .darkmode-btn .circle {
-    background-color: #d8dbda;
+    background-color: #d8dbda88;
     position: absolute;
-    display: inline-block;
-    right: 2.3vw;
-    top: -0.08vw;
+    right: 116.4%;
+    top: -0.368vw;
     width: 1.8vw;
     height: 1.8vw;
     border-radius: 0.9vw;
@@ -304,8 +329,8 @@ h1 {
 }
 
 .show .darkmode-btn-on .circle {
-    right: 0.5vw;
-    background-color: #828381;
+    right: 103%;
+    background-color: #82838188;
 }
 
 .darkmode-btn .circle .td {

@@ -39,11 +39,6 @@ function LunchDisplay(x) {
     }
 }
 
-function Darkmode() {
-    document.getElementById("body").classList.toggle("darkmode");
-    document.getElementById("darkmode-btn").classList.toggle("darkmode-btn-on");
-}
-
-function Info() {
-    document.getElementById('info').classList.toggle('show');
+function ToggleClass(id, className) {
+    document.getElementById(id).classList.toggle(className);
 }
