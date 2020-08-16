@@ -7,7 +7,6 @@ body {
     overflow: hidden;
 }
 
-/* https://fonts.google.com/specimen/Roboto#standard-styles */
 
 body,
 p,
@@ -226,11 +225,35 @@ h1 {
 
 .description {
     font-size: 1.3vw;
+    line-height: 1.8vw;
 }
 
 .highlight {
     color: #377009;
     font-weight: bold;
+}
+
+.link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #1B3409;
+    box-shadow: inset 0 -0.2vw 0 #56a317;
+    padding: 0 0.1vw;
+    transition: .2s;
+}
+
+.link:hover {
+    box-shadow: inset 0 -1.6vw 0 #66bd1f;
+}
+
+.info-line {
+    width: 98%;
+}
+
+.info-line :nth-child(2) {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
 }
 
 
@@ -282,7 +305,7 @@ h1 {
 
 .show .darkmode-btn-on .circle {
     right: 0.5vw;
-    background-color: #b0b4b2;
+    background-color: #828381;
 }
 
 .darkmode-btn .circle .td {
@@ -306,97 +329,8 @@ h1 {
 }
 
 .show .darkmode-btn-on .small-circle {
-    background-color: #458312;
+    background-color: #b3b6b3;
 }
-
-
-/* .darkmode-btn-phone-fix {
-    display: none;
-    position: absolute;
-    margin: 50px;
-    padding: 20px;
-    width: 80px;
-    height: 40px;
-}
-
-@media only screen and (orientation: portrait) {
-    .darkmode-btn-phone-fix {
-        display: block;
-    }
-}
-
-.darkmode-btn #moon {
-    display: none;
-}
-
-.darkmode-btn #sun {
-    display: inline;
-    animation: fade-in 1s;
-}
-
-.darkmode-btn-on #moon {
-    display: inline;
-    animation: fade-in 1s;
-}
-
-.darkmode-btn-on #sun {
-    display: none;
-}
-
-.darkmode-btn {
-    position: absolute;
-    display: block;
-    padding: 20px;
-    width: 80px;
-    height: 40px;
-    left: 33%;
-    top: 61.5%;
-}
-
-.darkmode-btn-on {
-    margin-left: 40px;
-}
-
-.darkmode-btn-placeholder {
-    position: absolute;
-    background-color: #ebebeb;
-    width: 80px;
-    height: 40px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.darkmode-btn-circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: #9c9c9c;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.darkmode-btn-circle i {
-    position: absolute;
-    color: White;
-    font-size: 30px;
-    margin: 9.5px;
-}
-
-.darkmode-text {
-    position: absolute;
-    display: block;
-    width: 30%;
-    font-size: 30px;
-    padding: 0.4%;
-    left: 25%;
-    margin-top: 30%; */
-    /* margin-left: -25%; -10% */ /*
-    text-align: center;
-} */
 
 
 @keyframes fade-in {
