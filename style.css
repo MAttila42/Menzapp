@@ -10,7 +10,8 @@ body {
 
 body,
 p,
-h1 {
+h1,
+.show div {
     transition: 1s;
 }
 
@@ -24,6 +25,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 1s;
 }
 
 
@@ -170,7 +172,7 @@ h1 {
 #info .container {
     visibility: hidden;
     position: absolute;
-    margin: 3vw 36%;
+    margin: 3% 36% 0;
     margin-bottom: 30vw;
     padding: 2vw 2vw 0 2vw;
     width: 24%;
@@ -258,7 +260,7 @@ h1 {
 }
 
 .link:hover {
-    box-shadow: inset 0 -1.8vw 0 #89d34c;
+    box-shadow: inset 0 -1.8vw 0 #89d34cb2;
 }
 
 .info-line {
@@ -294,7 +296,7 @@ h1 {
 .darkmode-btn .line {
     background-color: #b0b4b2;
     position: absolute;
-    right: 106%;
+    right: 102%;
     width: 2.6vw;
     height: 1.2vw;
     border-radius: 0.6vw;
@@ -310,9 +312,9 @@ h1 {
 }
 
 .darkmode-btn .circle {
-    background-color: #d8dbda88;
+    background-color: #d8dbd888;
     position: absolute;
-    right: 116.4%;
+    right: 112.4%;
     top: -0.368vw;
     width: 1.8vw;
     height: 1.8vw;
@@ -325,8 +327,8 @@ h1 {
 }
 
 .show .darkmode-btn-on .circle {
-    right: 103%;
-    background-color: #82838188;
+    right: 99%;
+    background-color: #5e5f5c88;
 }
 
 .darkmode-btn .circle .td {
@@ -379,36 +381,76 @@ h1 {
 }
 
 
+@font-face {
+    font-family: "Roboto";
+    src: url("/Roboto-Regular.ttf");
+}
+
+
 /* Dark UI */
 
 .darkmode {
     background-color: black;
-    transition: 1s;
+    color: #e1e4e0;
 }
 
-.darkmode p,
+.darkmode .big-card {
+    background-color: black;
+}
+
 .darkmode h1 {
-    color: lightgray;
+    background-color: black;
+    margin: 0;
+    color: #e1e4e0;
 }
 
 .darkmode #date {
     background-color: #52752a;
+    margin-bottom: 1.4vw;
 }
 
-.darkmode .darkmode-btn-placeholder {
-    background-color: #2c2c2c;
+.darkmode #lunch {
+    background-color: #242523;
 }
 
-.darkmode .darkmode-btn-circle {
-    background-color: #575757;
+.darkmode .arrow a {
+    border-bottom: 0.6vw solid #393b37;
+    border-left: 0.6vw solid #393b37;
 }
 
-.darkmode .darkmode-btn-circle i {
-    color: lightgray;
+.darkmode .arrow a.useful {
+    border-bottom: 0.6vw solid #c6c9c5;
+    border-left: 0.6vw solid #c6c9c5;
 }
 
+.darkmode .arrow a.useful:hover {
+    border-color: #49940b;
+    box-shadow: #c6c9c5 -0.3vw 0.3vw;
+}
 
-@font-face {
-    font-family: "Roboto";
-    src: url("/Roboto-Regular.ttf");
+.darkmode .info-button {
+    background-color: #2b2c2a;
+    color: #e1e4e0;
+}
+
+.darkmode #info.show {
+    background-color: #36363650;
+}
+
+.darkmode #info .container {
+    background-color: #282927;
+    color: #e1e4e0;
+}
+
+.darkmode .highlight {
+    color: #488f0e;
+}
+
+.darkmode .link {
+    color: #e1e4e0;
+    box-shadow: inset 0 -0.2vw 0 #488f0e;
+}
+
+.darkmode .link:hover {
+    box-shadow: inset 0 -1.8vw 0 #488f0eb2;
 }
