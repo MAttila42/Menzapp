@@ -4,7 +4,6 @@ body {
     background-color: #d2dad0;
     user-select: none;
     color: #1B3409;
-    overflow: hidden;
 }
 
 
@@ -60,6 +59,7 @@ h1 {
     padding: 1.5%;
     font-size: 2.5vw;
     text-align: center;
+    border-radius: 5px;
 }
 
 #lunch {
@@ -185,7 +185,7 @@ h1 {
     overflow-x: hidden;
     overflow-y: scroll;
     z-index: 1;
-    
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -453,4 +453,145 @@ h1 {
 
 .darkmode .link:hover {
     box-shadow: inset 0 -1.8vw 0 #488f0eb2;
+}
+
+
+.phone {
+    display: none;
+}
+
+
+/* Phone view */
+
+@media (orientation: portrait) {
+    .phone {
+        display: block;
+        text-align: center;
+    }
+
+    .computer {
+        display: none;
+    }
+
+
+    #date-phone {
+        display: inline-block;
+        margin: 5px;
+        padding: 1.5%;
+        font-size: 8vw;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    #lunch-phone {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: #fbf9f6;
+        border-radius: 5px;
+        box-shadow: #00000063 0.3vw 0.3vw 10px;
+        width: 90vw;
+        height: 50vw;
+        font-weight: bold;
+        font-size: 6vw;
+        user-select: text;
+    }
+    
+    #lunch-phone::selection {
+        background-color: #7f966c38;
+        color: #49940b;
+    }
+
+    #back-phone {
+        text-align: left;
+    }
+    
+    #next-phone {
+        text-align: right;
+    }
+
+    #back-phone a {
+        transform: rotate(45deg);
+    }
+    
+    #next-phone a {
+        transform: rotate(-135deg);
+    }
+
+    #info-phone .container {
+        visibility: hidden;
+        position: absolute;
+        margin: 3% 36% 0;
+        margin-bottom: 30vw;
+        padding: 2vw 2vw 0 2vw;
+        width: 24%;
+        max-height: 80%;
+        color: #1B3409;
+        background-color: #fbf9f6;
+        box-shadow: #00000063 0.2vw 0.2vw 10px;
+        border-radius: 1vw;
+        text-align: left;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        z-index: 1;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #info-phone .container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #info-phone.show {
+        position: absolute;
+        background-color: #00000067;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transition: .5s;
+    }
+
+    #info-phone.show .container {
+        visibility: visible;
+        animation: fade-in .5s;
+    }
+
+    .darkmode #date-phone {
+        background-color: #52752a;
+        margin-bottom: 1.4vw;
+    }
+    
+    .darkmode #lunch-phone {
+        background-color: #242523;
+    }
+
+    .darkmode #info-phone.show {
+        background-color: #36363650;
+    }
+    
+    .darkmode #info-phone .container {
+        background-color: #282927;
+        color: #e1e4e0;
+    }
+
+
+    body {
+        background-color: #eeeeee;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 8vw;
+        font-size: 14vw;
+    }
+
+    .lunch-container {
+        position: absolute;
+        margin: 5vw;
+    }
 }
