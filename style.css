@@ -4,6 +4,7 @@ body {
     background-color: #d2dad0;
     user-select: none;
     color: #1B3409;
+    /* overflow: hidden; */
 }
 
 
@@ -465,8 +466,11 @@ h1 {
 
 @media (orientation: portrait) {
     .phone {
+        position: absolute;
         display: block;
         text-align: center;
+        top: 0;
+        bottom: 0;
     }
 
     .computer {
@@ -482,20 +486,20 @@ h1 {
         text-align: center;
         border-radius: 5px;
     }
-    
+
     #lunch-phone {
         display: table-cell;
         vertical-align: middle;
         background-color: #fbf9f6;
-        border-radius: 5px;
-        box-shadow: #00000063 0.3vw 0.3vw 10px;
-        width: 90vw;
+        box-shadow: #00000063 0.6vw 0.6vw 10px;
+        border-radius: 4vw;
+        width: 86vw;
         height: 50vw;
         font-weight: bold;
         font-size: 6vw;
         user-select: text;
     }
-    
+
     #lunch-phone::selection {
         background-color: #7f966c38;
         color: #49940b;
@@ -504,7 +508,7 @@ h1 {
     #back-phone {
         text-align: left;
     }
-    
+
     #next-phone {
         text-align: right;
     }
@@ -512,7 +516,7 @@ h1 {
     #back-phone a {
         transform: rotate(45deg);
     }
-    
+
     #next-phone a {
         transform: rotate(-135deg);
     }
@@ -562,7 +566,7 @@ h1 {
         background-color: #52752a;
         margin-bottom: 1.4vw;
     }
-    
+
     .darkmode #lunch-phone {
         background-color: #242523;
     }
@@ -570,7 +574,7 @@ h1 {
     .darkmode #info-phone.show {
         background-color: #36363650;
     }
-    
+
     .darkmode #info-phone .container {
         background-color: #282927;
         color: #e1e4e0;
@@ -586,12 +590,223 @@ h1 {
     }
 
     h1 {
+        margin: 0;
         margin-top: 8vw;
         font-size: 14vw;
+        text-shadow: 0.2vw 0.2vw 0.6vw #1e3d00;
+        box-shadow: #00000063 0.6vw 0.6vw 10px;
+        border-radius: 4vw;
     }
 
     .lunch-container {
+        margin: 7vw;
+    }
+
+    .arrow {
+        width: 16vw;
+    }
+
+    .arrow a {
+        width: 5vw;
+        height: 5vw;
+        border-bottom: 2vw solid #8f9688;
+        border-left: 2vw solid #8f9688;
+    }
+
+    .arrow a.useful {
+        border-bottom: 2vw solid #49940b;
+        border-left: 2vw solid #49940b;
+        box-shadow: #1B3409 -1vw 1vw;
+        cursor: pointer;
+    }
+
+    .arrow a.useful:hover {
+        box-shadow: #1B3409 -1vw 1vw;
+    }
+
+    .info-button {
+        background-color: #fbf9f6;
         position: absolute;
-        margin: 5vw;
+        margin: 0;
+        padding-left: 0.8vw;
+        width: auto;
+        padding: 0 3vw;
+        height: 14vw;
+        top: 94%;
+        left: 31%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        border-radius: 7vw;
+        box-shadow: #00000063 0.6vw 0.6vw 10px;
+        cursor: pointer;
+    }
+    
+    .info-button:hover {
+        width: auto;
+        margin-left: 0;
+    }
+    /* asd */
+    #info-phone .container {
+        margin: 3%;
+        padding: 6% 6% 0 6vw;
+        width: 82%;
+        max-height: 90%;
+        box-shadow: #00000063 0.8vw 0.8vw 10px;
+        border-radius: 4vw;
+    }
+    
+    #info-phone.show .container {
+        visibility: visible;
+        animation: fade-in .5s;
+    }
+    
+    .show .background-close {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .close-button {
+        position: absolute;
+        width: 3vw;
+        height: 3vw;
+        top: 0;
+        right: 0;
+        margin: 0.6vw;
+        font-size: 2vw;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .title {
+        display: inline-block;
+        margin-bottom: 0.2vw;
+        width: 100%;
+        text-align: center;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    
+    .description {
+        font-size: 6vw;
+        line-height: 7vw;
+    }
+    
+    .highlight {
+        color: #377009;
+        font-weight: bold;
+    }
+    
+    .link {
+        font-weight: bold;
+        text-decoration: none;
+        color: #1B3409;
+        box-shadow: inset 0 -0.2vw 0 #56a317;
+        padding: 0 0.1vw;
+    }
+    
+    .show .link {
+        transition: .2s;
+    }
+    
+    .link:hover {
+        box-shadow: inset 0 -1.8vw 0 #89d34cb2;
+    }
+    
+    .info-line {
+        width: 100%;
+    }
+    
+    .info-line :nth-child(2) {
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+    }
+    
+    .text {
+        margin: 2vw 0;
+        color: #6a6b69;
+        text-align: center;
+        font-size: 1vw;
+    }
+    
+    
+    .darkmode-btn {
+        position: absolute;
+        display: inline-block;
+        width: 35%;
+        margin-top: -1.65%;
+        text-align: right;
+    }
+    
+    .dm-btn-m {
+        margin: 1vw 0;
+    }
+    
+    .darkmode-btn .line {
+        background-color: #b0b4b2;
+        position: absolute;
+        right: 102%;
+        width: 2.6vw;
+        height: 1.2vw;
+        border-radius: 0.6vw;
+        cursor: pointer;
+    }
+    
+    .show .darkmode-btn .line {
+        transition: .6s;
+    }
+    
+    .show .darkmode-btn-on .line {
+        background-color: #49940b;
+    }
+    
+    .darkmode-btn .circle {
+        background-color: #d8dbd888;
+        position: absolute;
+        right: 112.4%;
+        top: -0.368vw;
+        width: 1.8vw;
+        height: 1.8vw;
+        border-radius: 0.9vw;
+        cursor: pointer;
+    }
+    
+    .show .darkmode-btn .circle {
+        transition: .6s;
+    }
+    
+    .show .darkmode-btn-on .circle {
+        right: 99%;
+        background-color: #5e5f5c88;
+    }
+    
+    .darkmode-btn .circle .td {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .darkmode-btn .small-circle {
+        display: inline-block;
+        background-color: #f4f5f4;
+        width: 1vw;
+        height: 1vw;
+        margin-top: 0.4vw;
+        margin-right: 0.4vw;
+        border-radius: 0.5vw;
+    }
+    
+    .show .darkmode-btn .small-circle {
+        transition: .6s;
+    }
+    
+    .show .darkmode-btn-on .small-circle {
+        background-color: #b3b6b3;
+    }
+
+
+    .darkmode h1 {
+        margin-top: 10vw;
     }
 }
