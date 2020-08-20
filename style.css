@@ -555,6 +555,15 @@ h1 {
         box-shadow: #c6c9c5 -1vw 1vw;
     }
 
+    .darkmode .link {
+        box-shadow: inset 0 -1vw 0 #488f0e;
+        cursor: default;
+    }
+    
+    .darkmode .link:hover {
+        box-shadow: inset 0 -1vw 0 #56a317;
+    }
+
 
     body {
         background-color: #eeeeee;
