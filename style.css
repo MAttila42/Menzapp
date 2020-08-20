@@ -4,7 +4,12 @@ body {
     background-color: #d2dad0;
     user-select: none;
     color: #1B3409;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+::selection {
+    background-color: #7f966c38;
+    color: #49940b;
 }
 
 
@@ -74,11 +79,6 @@ h1 {
     font-weight: bold;
     font-size: 2vw;
     user-select: text;
-}
-
-#lunch::selection {
-    background-color: #7f966c38;
-    color: #49940b;
 }
 
 .arrow {
@@ -501,11 +501,6 @@ h1 {
         user-select: text;
     }
 
-    #lunch-phone::selection {
-        background-color: #7f966c38;
-        color: #49940b;
-    }
-
     #back-phone {
         text-align: left;
     }
@@ -567,6 +562,7 @@ h1 {
 
     body {
         background-color: #eeeeee;
+        overflow: auto;
     }
 
     h1 {
