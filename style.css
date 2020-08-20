@@ -67,7 +67,7 @@ h1 {
     display: table-cell;
     vertical-align: middle;
     background-color: #fbf9f6;
-    border-radius: 5px;
+    border-radius: 0.6vw;
     box-shadow: #00000063 0.3vw 0.3vw 10px;
     width: 40vw;
     height: 20vw;
@@ -411,7 +411,8 @@ h1 {
 }
 
 .darkmode #lunch {
-    background-color: #242523;
+    /* background-color: #242523; */
+    background-color: #30312f;
 }
 
 .darkmode .arrow a {
@@ -522,12 +523,12 @@ h1 {
     }
 
     .darkmode #date-phone {
-        background-color: #52752a;
+        background-color: #3d5527;
         margin-bottom: 1.4vw;
     }
 
     .darkmode #lunch-phone {
-        background-color: #242523;
+        background-color: #30312f;
     }
 
     .darkmode #info-phone.show {
@@ -537,6 +538,21 @@ h1 {
     .darkmode #info-phone .container {
         background-color: #282927;
         color: #e1e4e0;
+    }
+
+    .darkmode .arrow a {
+        border-bottom: 2vw solid #393b37;
+        border-left: 2vw solid #393b37;
+    }
+    
+    .darkmode .arrow a.useful {
+        border-bottom: 2vw solid #49940b;
+        border-left: 2vw solid #49940b;
+        box-shadow: #c6c9c5 -1vw 1vw;
+    }
+    
+    .darkmode .arrow a.useful:hover {
+        box-shadow: #c6c9c5 -1vw 1vw;
     }
 
 
@@ -576,7 +592,7 @@ h1 {
         border-bottom: 2vw solid #49940b;
         border-left: 2vw solid #49940b;
         box-shadow: #1B3409 -1vw 1vw;
-        cursor: pointer;
+        cursor: default;
     }
 
     .arrow a.useful:hover {
@@ -584,8 +600,6 @@ h1 {
     }
 
     .info-button {
-        background-color: #fbf9f6;
-        position: absolute;
         margin: 0;
         padding-left: 0.8vw;
         width: auto;
@@ -593,11 +607,10 @@ h1 {
         height: 14vw;
         top: 94%;
         left: 31%;
-        transform: translate(-50%, -50%);
         font-size: 7vw;
         border-radius: 7vw;
         box-shadow: #00000063 0.6vw 0.6vw 10px;
-        cursor: pointer;
+        cursor: default;
     }
     
     .info-button:hover {
@@ -661,25 +674,14 @@ h1 {
     }
     
     .close-button {
-        /* background-color: tomato; */
-        position: absolute;
         width: 10vw;
         height: 10vw;
-        top: 0;
-        right: 0;
         margin: 2vw;
         font-size: 8vw;
-        text-align: center;
-        cursor: pointer;
     }
     
     .title {
-        display: inline-block;
-        margin-bottom: 0.2vw;
-        width: 100%;
-        text-align: center;
         font-size: 8vw;
-        font-weight: bold;
     }
     
     .description {
@@ -687,36 +689,13 @@ h1 {
         line-height: 8vw;
     }
     
-    .highlight {
-        color: #377009;
-        font-weight: bold;
-    }
-    
     .link {
-        font-weight: bold;
-        text-decoration: none;
-        color: #1B3409;
         box-shadow: inset 0 -1vw 0 #56a317;
-        padding: 0 0.1vw;
-    }
-    
-    .show .link {
-        transition: .2s;
+        cursor: default;
     }
     
     .link:hover {
         box-shadow: inset 0 -1vw 0 #56a317;
-    }
-    
-    .info-line {
-        width: 100%;
-        /* background-color: tomato; */
-    }
-    
-    .info-line :nth-child(2) {
-        display: inline-block;
-        width: 100%;
-        text-align: right;
     }
     
     .text {
@@ -726,78 +705,37 @@ h1 {
     }
     
     
-    .darkmode-btn {
-        position: absolute;
-        display: inline-block;
-        width: 35%;
-        margin-top: -2.4%;
-        text-align: right;
-    }
-    
     .dm-btn-m {
         margin: 4vw 0;
     }
     
     .darkmode-btn .line {
-        background-color: #b0b4b2;
-        position: absolute;
-        margin: 0;
         right: 102%;
         width: 10.8vw;
         height: 5vw;
         border-radius: 2.5vw;
-        cursor: pointer;
-    }
-    
-    .show .darkmode-btn .line {
-        transition: .6s;
-    }
-    
-    .show .darkmode-btn-on .line {
-        background-color: #49940b;
+        cursor: default;
     }
     
     .darkmode-btn .circle {
-        background-color: #d8dbd888;
-        position: absolute;
         right: 114.6%;
         top: -1.4vw;
         width: 7.5vw;
         height: 7.5vw;
         border-radius: 3.75vw;
-        cursor: pointer;
-    }
-    
-    .show .darkmode-btn .circle {
-        transition: .6s;
+        cursor: default;
     }
     
     .show .darkmode-btn-on .circle {
         right: 98%;
-        background-color: #5e5f5c88;
-    }
-    
-    .darkmode-btn .circle .td {
-        text-align: center;
-        width: 100%;
-        height: 100%;
     }
     
     .darkmode-btn .small-circle {
-        background-color: #f4f5f4;
         width: 4.16vw;
         height: 4.16vw;
         margin-bottom: 0.32vw;
         margin-right: 1.66vw;
         border-radius: 2.08vw;
-    }
-    
-    .show .darkmode-btn .small-circle {
-        transition: .6s;
-    }
-    
-    .show .darkmode-btn-on .small-circle {
-        background-color: #b3b6b3;
     }
 
 
