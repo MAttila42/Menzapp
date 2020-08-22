@@ -556,7 +556,7 @@ h1 {
     }
     
     .darkmode .link:hover {
-        box-shadow: inset 0 -1vw 0 #56a317;
+        box-shadow: inset 0 -1vw 0 #488f0e;
     }
 
 
@@ -683,6 +683,7 @@ h1 {
         height: 10vw;
         margin: 2vw;
         font-size: 8vw;
+        cursor: default;
     }
     
     .title {
