@@ -12,6 +12,33 @@ body {
     color: #49940b;
 }
 
+.flat .big-card,
+.flat h1,
+.flat #lunch,
+.flat .info-button {
+    box-shadow: none;
+}
+
+.flat .big-card {
+    width: 88%;
+    height: 68%;
+}
+
+.flat h1 {
+    padding: 0.9vw;
+    font-size: 4.8vw;
+}
+
+.flat #lunch {
+    width: 38vw;
+    height: 19vw;
+}
+
+.flat .info-button {
+    width: 3.8vw;
+    height: 3.8vw;
+}
+
 
 body,
 p,
@@ -49,13 +76,13 @@ h1,
 
 h1 {
     display: inline-block;
-    margin: 30px;
-    padding: 20px;
+    margin: 1.4vw;
+    padding: 1vw;
     font-size: 5vw;
     color: #5dbe0d;
     background-color: #fbf9f6;
     text-shadow: 0.06vw 0.06vw 0.2vw #1e3d00;
-    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    box-shadow: #00000063 0.3vw 0.3vw 10px;
     border-radius: 1vw;
 }
 

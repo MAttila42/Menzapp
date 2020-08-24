@@ -4,6 +4,10 @@ function Load() {
     if (d.getDay() == 0) LunchDisplay(1);
     else if (d.getDay() == 6) LunchDisplay(2);
     else LunchDisplay(0);
+
+    setTimeout(() => {
+        ToggleClass("body", "flat");
+    }, 300);
 }
 
 function LunchDisplay(x) {
