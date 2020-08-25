@@ -6,7 +6,7 @@ function Load() {
     else LunchDisplay(0);
 
     setTimeout(() => {
-        ToggleClass("body", "flat");
+        ToggleClass("computer", "flat");
     }, 300);
 }
 

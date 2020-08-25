@@ -32,11 +32,31 @@ body {
 .flat #lunch {
     width: 38vw;
     height: 19vw;
+    font-size: 1.9vw;
 }
 
 .flat .info-button {
+    margin-bottom: 0.8vw;
+    margin-left: 0.8vw;
+    padding-left: 0.7vw;
     width: 3.8vw;
     height: 3.8vw;
+}
+
+.flat #date {
+    font-size: 2.3vw;
+}
+
+.flat .arrow a {
+    width: 1.2vw;
+    height: 1.2vw;
+    border-bottom: 0.58vw solid #8f9688;
+    border-left: 0.58vw solid #8f9688;
+}
+
+.flat .arrow a.useful {
+    border-bottom: 0.58vw solid #1B3409;
+    border-left: 0.58vw solid #1B3409;
 }
 
 
@@ -181,7 +201,7 @@ h1 {
 .info-button:hover {
     width: 16vw;
     margin-left: 6vw;
-    box-shadow: #00000063 0.2vw 0.2vw 10px;
+    box-shadow: #00000063 0.3vw 0.3vw 10px;
     transition: .2s;
 }
 
