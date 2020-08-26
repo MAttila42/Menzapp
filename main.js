@@ -79,7 +79,9 @@ function ToggleClass(id, className) {
 function ToggleSetting(setting) {
     if (settings[setting] == "true") {
         localStorage.setItem(setting, false);
+        settings[setting] = "false";
     } else {
         localStorage.setItem(setting, true);
+        settings[setting] = "true";
     }
 }
