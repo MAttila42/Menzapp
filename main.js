@@ -1,4 +1,13 @@
 var d = new Date();
+    
+var settings = {
+    "darkmode": localStorage.getItem("darkmode")
+}
+
+if (settings["darkmode"] == undefined) {
+    localStorage.setItem("darkmode", false);
+    settings["darkmode"] = false;
+}
 
 function Load() {
     if (d.getDay() == 0) LunchDisplay(1);
@@ -8,6 +17,14 @@ function Load() {
     setTimeout(() => {
         ToggleClass("computer", "flat");
     }, 300);
+
+    setTimeout(() => {
+        if (settings["darkmode"] == "true") {
+            ToggleClass('body','darkmode');
+            ToggleClass('darkmode-btn', 'darkmode-btn-on');
+            ToggleClass('darkmode-btn-phone', 'darkmode-btn-on');
+        }
+    }, 500);
 }
 
 function LunchDisplay(x) {
@@ -43,13 +60,13 @@ function LunchDisplay(x) {
     } else if (today == lastDay) {
         document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
         document.getElementById("next").innerHTML = '<a></a>';
-        
+
         document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
         document.getElementById("next-phone").innerHTML = '<a></a>';
     } else {
         document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
         document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-        
+
         document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
         document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
     }
@@ -57,4 +74,12 @@ function LunchDisplay(x) {
 
 function ToggleClass(id, className) {
     document.getElementById(id).classList.toggle(className);
+}
+
+function ToggleSetting(setting) {
+    if (settings[setting] == "true") {
+        localStorage.setItem(setting, false);
+    } else {
+        localStorage.setItem(setting, true);
+    }
 }
