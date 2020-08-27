@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Menzapp">
     <meta name="description" content="Győri középiskolák menzájának létrehozott web app">
-    <meta name="theme-color" content="#2F3BA2" />
+    <meta name="theme-color" content="#408508" />
     <link rel="apple-touch-icon" href="icon.png">
     <title>Menzapp</title>
     <script src="https://kit.fontawesome.com/8790abaace.js" crossorigin="anonymous"></script>
@@ -18,19 +18,10 @@
     <script src="main.js"></script>
     <script src="lunch.js"></script>
     <script src="install.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then((reg) => {
-                  console.log('Service worker registered.', reg);
-                });
-          });
-        }
-    </script>
 </head>
 
 <body id="body" onload="Load()">
+    <button id="butInstall" aria-label="Install" hidden></button>
     <div id="computer" class="computer flat">
         <div class="big-card"></div>
         <table class="aligner-table">
@@ -168,6 +159,17 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((reg) => {
+                  console.log('Service worker registered.', reg);
+                });
+          });
+        }
+    </script>
 </body>
 
 </html>
