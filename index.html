@@ -7,21 +7,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Menzapp">
+    <meta name="msapplication-TileColor" content="#00a300">
     <meta name="description" content="Győri középiskolák menzájának létrehozott web app">
     <meta name="theme-color" content="#408508" />
-    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
     <title>Menzapp</title>
+
     <script src="https://kit.fontawesome.com/8790abaace.js" crossorigin="anonymous"></script>
     <link id="css" rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <script src="main.js"></script>
     <script src="lunch.js"></script>
-    <script src="install.js"></script>
 </head>
 
 <body id="body" onload="Load()">
-    <button id="butInstall" aria-label="Install" hidden></button>
     <div id="computer" class="computer flat">
         <div class="big-card"></div>
         <table class="aligner-table">
@@ -42,10 +47,12 @@
             </td>
         </table>
         <div id="info">
-            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')"></div>
+            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+            </div>
             <div class="container">
                 <div class="aligner">
-                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+                    <table class="close-button"
+                        onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
                         <td>×</td>
                     </table>
                 </div>
@@ -72,16 +79,18 @@
                     </table>
                     <table class="info-line">
                         <td>Forrás:</td>
-                        <td><a target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
+                        <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
                     </table>
                     <table class="info-line">
                         <td>Használt font:</td>
-                        <td><a target="_blank" href="https://fonts.google.com/specimen/Roboto" class="link">Roboto</a>
+                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Roboto"
+                                class="link">Roboto</a>
                         </td>
                     </table>
                     <table class="info-line">
                         <td>Ikonok:</td>
-                        <td><a target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
+                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/"
+                                class="link">Fontawesome</a></td>
                     </table>
                     <div class="text">
                         Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
@@ -111,10 +120,12 @@
             </td>
         </table>
         <div id="info-phone">
-            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')"></div>
+            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+            </div>
             <div class="container">
                 <div class="aligner">
-                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+                    <table class="close-button"
+                        onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
                         <td>×</td>
                     </table>
                 </div>
@@ -141,16 +152,18 @@
                     </table>
                     <table class="info-line">
                         <td>Forrás:</td>
-                        <td><a target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
+                        <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
                     </table>
                     <table class="info-line">
                         <td>Használt font:</td>
-                        <td><a target="_blank" href="https://fonts.google.com/specimen/Roboto" class="link">Roboto</a>
+                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Roboto"
+                                class="link">Roboto</a>
                         </td>
                     </table>
                     <table class="info-line">
                         <td>Ikonok:</td>
-                        <td><a target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
+                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/"
+                                class="link">Fontawesome</a></td>
                     </table>
                     <div class="text">
                         Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
@@ -159,8 +172,21 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="/upup.min.js"></script>
     <script>
+        UpUp.start({
+            'content-url': 'index.html',
+            'assets': [
+                'lunch.js',
+                'main.js',
+                'Roboto-Regular.ttf',
+                'style.css'
+            ]
+        });
+    </script>
+
+    <!-- <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
             navigator.serviceWorker.register('/service-worker.js')
@@ -169,7 +195,7 @@
                 });
           });
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
