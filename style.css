@@ -12,6 +12,7 @@ body {
     color: #49940b;
 }
 
+
 .flat .big-card,
 .flat h1,
 .flat #lunch,
@@ -60,6 +61,35 @@ body {
 }
 
 
+/* #loading-shade {
+    position: absolute;
+    background-color: #00000067;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#loading-shade.hide {
+    display: none;
+}
+
+.loading-icon {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    border: 1vw solid transparent;
+    border-top: 1vw solid white;
+    border-right: 1vw solid white;
+    border-bottom: 1vw solid white;
+    border-radius: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
+} */
+
+
 #body,
 p,
 h1,
@@ -68,7 +98,7 @@ h1,
 }
 
 .big-card {
-    position: fixed;
+    position: absolute;
     border-radius: 2vw;
     box-shadow: #00000063 0.2vw 0.2vw 10px;
     background-color: #eeeeee;
@@ -428,6 +458,16 @@ h1 {
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 @font-face {
     font-family: "Roboto";
@@ -586,13 +626,13 @@ h1 {
         border-bottom: 2vw solid #393b37;
         border-left: 2vw solid #393b37;
     }
-    
+
     .darkmode .arrow a.useful {
         border-bottom: 2vw solid #49940b;
         border-left: 2vw solid #49940b;
         box-shadow: #c6c9c5 -1vw 1vw;
     }
-    
+
     .darkmode .arrow a.useful:hover {
         box-shadow: #c6c9c5 -1vw 1vw;
     }
@@ -601,7 +641,7 @@ h1 {
         box-shadow: inset 0 -1vw 0 #488f0e;
         cursor: default;
     }
-    
+
     .darkmode .link:hover {
         box-shadow: inset 0 -1vw 0 #488f0e;
     }
@@ -664,13 +704,13 @@ h1 {
         box-shadow: #00000063 0.6vw 0.6vw 10px;
         cursor: default;
     }
-    
+
     .info-button:hover {
         width: auto;
         margin-left: 0;
         box-shadow: #00000063 0.6vw 0.6vw 10px;
     }
-    
+
     #info-phone .container {
         visibility: hidden;
         position: absolute;
@@ -713,18 +753,18 @@ h1 {
         animation: fade-in .5s;
         height: auto;
     }
-    
+
     #info-phone.show .container {
         visibility: visible;
         animation: fade-in .5s;
     }
-    
+
     .show .background-close {
         position: absolute;
         width: 100%;
         height: 100%;
     }
-    
+
     .close-button {
         width: 10vw;
         height: 10vw;
@@ -732,36 +772,36 @@ h1 {
         font-size: 8vw;
         cursor: default;
     }
-    
+
     .title {
         font-size: 8vw;
     }
-    
+
     .description {
         font-size: 6vw;
         line-height: 8vw;
     }
-    
+
     .link {
         box-shadow: inset 0 -1vw 0 #56a317;
         cursor: default;
     }
-    
+
     .link:hover {
         box-shadow: inset 0 -1vw 0 #56a317;
     }
-    
+
     .text {
         margin: 6vw 0;
         font-size: 3.5vw;
         line-height: 6vw;
     }
-    
-    
+
+
     .dm-btn-m {
         margin: 4vw 0;
     }
-    
+
     .darkmode-btn .line {
         right: 102%;
         width: 10.8vw;
@@ -769,7 +809,7 @@ h1 {
         border-radius: 2.5vw;
         cursor: default;
     }
-    
+
     .darkmode-btn .circle {
         right: 114.6%;
         top: -1.4vw;
@@ -778,11 +818,11 @@ h1 {
         border-radius: 3.75vw;
         cursor: default;
     }
-    
+
     .show .darkmode-btn-on .circle {
         right: 98%;
     }
-    
+
     .darkmode-btn .small-circle {
         width: 4.16vw;
         height: 4.16vw;

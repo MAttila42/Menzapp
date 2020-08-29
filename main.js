@@ -14,6 +14,8 @@ function Load() {
     else if (d.getDay() == 6) LunchDisplay(2);
     else LunchDisplay(0);
 
+    // document.getElementById("loading-shade").classList.toggle("hide");
+
     setTimeout(() => {
         ToggleClass("computer", "flat");
     }, 300);
