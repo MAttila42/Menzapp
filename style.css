@@ -91,12 +91,6 @@ body {
     animation: spin 2s linear infinite;
 }
 
-.darkmode .loading-icon {
-    border-top: 1.6vw solid #e1e4e0;
-    border-right: 1.6vw solid #e1e4e0;
-    border-bottom: 1.6vw solid #e1e4e0;
-}
-
 
 #body,
 p,
