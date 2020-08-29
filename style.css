@@ -61,7 +61,7 @@ body {
 }
 
 
-/* #loading-shade {
+#loading-shade {
     position: absolute;
     background-color: #00000067;
     top: 0;
@@ -76,18 +76,26 @@ body {
 
 .loading-icon {
     position: absolute;
+    margin: 0;
     width: 10vw;
     height: 10vw;
-    border: 1vw solid transparent;
-    border-top: 1vw solid white;
-    border-right: 1vw solid white;
-    border-bottom: 1vw solid white;
+    border: 1.6vw solid transparent;
+    border-top: 1.6vw solid white;
+    border-right: 1.6vw solid white;
+    border-bottom: 1.6vw solid white;
     border-radius: 10vw;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: -5.8vw;
+    margin-left: -5.8vw;
     animation: spin 2s linear infinite;
-} */
+}
+
+.darkmode .loading-icon {
+    border-top: 1.6vw solid #e1e4e0;
+    border-right: 1.6vw solid #e1e4e0;
+    border-bottom: 1.6vw solid #e1e4e0;
+}
 
 
 #body,
