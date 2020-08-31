@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #d2dad0;
     user-select: none;
     color: #1B3409;
@@ -247,12 +247,6 @@ h1 {
 .info-button:hover div {
     display: inline;
     animation: wait-and-fade-in 1s;
-}
-
-.info-button .icon {
-    background-color: tomato;
-    margin: 0;
-    width: 7vw;
 }
 
 
