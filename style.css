@@ -131,9 +131,10 @@ h1 {
     margin: 1.4vw;
     padding: 1vw;
     font-size: 5vw;
-    color: #5dbe0d;
+    /* color: #5dbe0d; */
+    color: #4ea00c;
     background-color: #fbf9f6;
-    text-shadow: 0.06vw 0.06vw 0.2vw #1e3d00;
+    text-shadow: 0.06vw 0.06vw 0.2vw #1e3d008c;
     box-shadow: #00000063 0.3vw 0.3vw 10px;
     border-radius: 1vw;
 }
@@ -246,6 +247,12 @@ h1 {
 .info-button:hover div {
     display: inline;
     animation: wait-and-fade-in 1s;
+}
+
+.info-button .icon {
+    background-color: tomato;
+    margin: 0;
+    width: 7vw;
 }
 
 
@@ -471,10 +478,10 @@ h1 {
 }
 
 
-@font-face {
+/* @font-face {
     font-family: "Roboto";
     src: url("/Roboto-Regular.ttf");
-}
+} */
 
 
 /* Dark UI */
