@@ -1,0 +1,7 @@
+.noscript {
+    display: inline;
+    font-weight: bold;
+    font-size: 2vw;
+    user-select: text;
+    padding: 1.5%;
+}

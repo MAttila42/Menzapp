@@ -91,6 +91,10 @@ body {
     animation: spin 2s linear infinite;
 }
 
+.noscript {
+    display: none;
+}
+
 
 #body,
 p,

@@ -20,10 +20,14 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link id="css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
     <script src="main.js"></script>
     <script src="lunch.js"></script>
+
+    <noscript>
+        <link rel="stylesheet" href="noscript.css">
+    </noscript>
 </head>
 
 <body id="body" onload="Load()">
@@ -32,12 +36,20 @@
         <table class="aligner-table">
             <td>
                 <h1>Mi az ebéd?</h1><br>
-                <p id="date">¯\_(ツ)_/¯</p><br>
+                <p id="date">
+                    <span class="noscript">
+                        ¯\_(ツ)_/¯
+                    </span>
+                </p><br>
                 <div class="arrow" id="back"></div>
                 <div class="arrow" id="next"></div>
             </td>
             <td>
-                <p id="lunch">Nem sikerült betölteni a menüt. Nem tiltottad le véletlenül a JavaScriptet?</p>
+                <p id="lunch">
+                    <span class="noscript">
+                        Nem sikerült betölteni a menüt. Nem tiltottad le véletlenül a JavaScriptet?
+                    </span>
+                </p>
             </td>
         </table>
         <table class="info-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
