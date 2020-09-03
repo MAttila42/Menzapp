@@ -345,7 +345,7 @@ h1 {
 }
 
 .link:hover {
-    box-shadow: inset 0 -1.8vw 0 #89d34cb2;
+    box-shadow: inset 0 -1.68vw 0 #89d34cb2;
 }
 
 .info-line {
@@ -542,7 +542,7 @@ h1 {
 }
 
 .darkmode .link:hover {
-    box-shadow: inset 0 -1.8vw 0 #488f0eb2;
+    box-shadow: inset 0 -1.68vw 0 #488f0eb2;
 }
 
 
