@@ -1,5 +1,5 @@
 var d = new Date();
-    
+
 var settings = {
     "darkmode": localStorage.getItem("darkmode")
 }
@@ -14,7 +14,7 @@ function Load() {
     else if (d.getDay() == 6) LunchDisplay(2);
     else LunchDisplay(0);
 
-    document.getElementById("loading-shade").classList.toggle("hide");
+    ToggleClass('loading-shade', 'hide');
 
     setTimeout(() => {
         ToggleClass("computer", "flat");
@@ -22,7 +22,7 @@ function Load() {
 
     setTimeout(() => {
         if (settings["darkmode"] == "true") {
-            ToggleClass('body','darkmode');
+            ToggleClass('body', 'darkmode');
             ToggleClass('darkmode-btn', 'darkmode-btn-on');
             ToggleClass('darkmode-btn-phone', 'darkmode-btn-on');
         }
@@ -33,8 +33,6 @@ function LunchDisplay(x) {
     d.setDate(d.getDate() + x);
 
     var today = d.getFullYear() + ". " + (d.getMonth() + 1).toString() + ". " + d.getDate() + ".";
-    var day;
-
     var napok = {
         0: "Vasárnap",
         1: "Hétfő",
@@ -44,34 +42,49 @@ function LunchDisplay(x) {
         5: "Péntek",
         6: "Szombat"
     }
+    var day = napok[d.getDay()]
 
-    day = napok[d.getDay()]
-
-    document.getElementById("date").innerText = today + " " + day;
-    document.getElementById("lunch").innerText = lunch[today];
-
-    document.getElementById("date-phone").innerText = today + " " + day;
-    document.getElementById("lunch-phone").innerText = lunch[today];
-
-    if (today == "2020. 8. 11.") {
-        document.getElementById("back").innerHTML = '<a></a>';
-        document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-
-        document.getElementById("back-phone").innerHTML = '<a></a>';
-        document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-    } else if (today == lastDay) {
-        document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-        document.getElementById("next").innerHTML = '<a></a>';
-
-        document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-        document.getElementById("next-phone").innerHTML = '<a></a>';
-    } else {
-        document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-        document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-
-        document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-        document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+    const doAjax = async () => {
+        const response = await fetch('lunches.json');
+        if (response.ok) {
+            const jVal = await response.json();
+            return Promise.resolve(jVal);
+        } else return Promise.reject('JSON file not found');
     }
+    doAjax().then((lunches) => {
+        // console.log(lunches["2020. 8. 11."]);
+        // lunches.forEach(i => {
+        //     console.log(lunches[i]);
+        // });
+        var firstDay = Object.keys(lunches)[0];
+        var lastDay = Object.keys(lunches)[Object.keys(lunches).length - 1];
+
+        document.getElementById("date").innerText = today + " " + day;
+        document.getElementById("lunch").innerText = lunches[today];
+    
+        document.getElementById("date-phone").innerText = today + " " + day;
+        document.getElementById("lunch-phone").innerText = lunches[today];
+
+        if (today == firstDay) {
+            document.getElementById("back").innerHTML = '<a></a>';
+            document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+    
+            document.getElementById("back-phone").innerHTML = '<a></a>';
+            document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+        } else if (today == lastDay) {
+            document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+            document.getElementById("next").innerHTML = '<a></a>';
+    
+            document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+            document.getElementById("next-phone").innerHTML = '<a></a>';
+        } else {
+            document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+            document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+    
+            document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
+            document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+        }
+    });
 }
 
 function ToggleClass(id, className) {

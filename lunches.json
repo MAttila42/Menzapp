@@ -1,4 +1,4 @@
-var lunch = {
+{
     "2020. 8. 11.": "Pizza",
     "2020. 8. 12.": "Nem Pizza",
     "2020. 8. 13.": "Valami diétás",
@@ -35,5 +35,3 @@ var lunch = {
     "2020. 9. 13.": "TesztÉtlap29",
     "2020. 9. 14.": "TesztÉtlap30"
 }
-
-var lastDay = "2020. 9. 14.";
