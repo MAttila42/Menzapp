@@ -52,35 +52,31 @@ function LunchDisplay(x) {
         } else return Promise.reject('JSON file not found');
     }
     doAjax().then((lunches) => {
-        // console.log(lunches["2020. 8. 11."]);
-        // lunches.forEach(i => {
-        //     console.log(lunches[i]);
-        // });
         var firstDay = Object.keys(lunches)[0];
         var lastDay = Object.keys(lunches)[Object.keys(lunches).length - 1];
 
         document.getElementById("date").innerText = today + " " + day;
         document.getElementById("lunch").innerText = lunches[today];
-    
+
         document.getElementById("date-phone").innerText = today + " " + day;
         document.getElementById("lunch-phone").innerText = lunches[today];
 
         if (today == firstDay) {
             document.getElementById("back").innerHTML = '<a></a>';
             document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-    
+
             document.getElementById("back-phone").innerHTML = '<a></a>';
             document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
         } else if (today == lastDay) {
             document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
             document.getElementById("next").innerHTML = '<a></a>';
-    
+
             document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
             document.getElementById("next-phone").innerHTML = '<a></a>';
         } else {
             document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
             document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-    
+
             document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
             document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
         }
