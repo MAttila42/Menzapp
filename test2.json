@@ -1,0 +1,106 @@
+[
+  {
+    "data": [
+      [],[],[],[],[],[],[],[],[],
+      [
+        {},
+        {"text": "Z\u00f6lds\u00e9ges gombaleves"},
+        {"text": "Francia hagymaleves"},
+        {"text": "Paradicsomleves"},
+        {"text": "Magyaros karfiolleves"},
+        {}
+      ],
+      [],
+      [
+        {},{},
+        {"text": "pir\u00edtott keny\u00e9rkocka"},
+        {"text": "bet\u00fct\u00e9szta"},
+        {},{}
+      ],
+      [
+        {},
+        {"text": "Csirkep\u00f6rk\u00f6lt"},
+        {"text": "Tavaszi rizsesh\u00fas"},
+        {"text": "R\u00e1ntott halfil\u00e9"},
+        {"text": "Zabpelyhes h\u00fasgoly\u00f3"},
+        {}
+      ],
+      [
+        {},{},{},{},
+        {"text": "Finomf\u0151zel\u00e9k, f\u00e9lbarna"},
+        {}
+      ],
+      [
+        {"text": "F\u0151\u00e9tel"},
+        {"text": "Ors\u00f3 t\u00e9szta"},
+        {"text": "C\u00e9klasal\u00e1ta"},
+        {"text": "Burgonyap\u00fcr\u00e9"},
+        {"text": "keny\u00e9r"},
+        {}
+      ],
+      [
+        {},
+        {"text": "Csemege uborka"},
+        {},
+        {"text": "S\u00e1rgar\u00e9p\u00e1s k\u00e1posztasal\u00e1ta"},
+        {"text": "K\u00f6rte"},
+        {}
+      ]
+    ]
+  },
+  {
+    "data": [
+      [],[],[],[],[],[],[],[],[],[],
+      [
+        {},
+        {"text": "H\u00fasgaluska leves"},
+        {"text": "Magyaros burgonyaleves"},
+        {"text": "Zellerkr\u00e9mleves"},
+        {},
+        {"text": "Kerti z\u00f6lds\u00e9gleves"}
+      ],
+      [
+        {"text": "Leves"},
+        {},{},{},{},{}
+      ],
+      [
+        {},{},{},
+        {"text": "Pir\u00edtott keny\u00e9rkocka"},
+        {"text": "leves"},
+        {}
+      ],
+      [
+        {},{},{},
+        {"text": "Szez\u00e1mmagos r\u00e1ntott"},
+        {},{}
+      ],
+      [
+        {},
+        {"text": "Sajtos-tejf\u00f6l\u00f6s t\u00e9szta"},
+        {"text": "Gy\u00f6ngybabf\u0151zel\u00e9k"},
+        {},
+        {"text": "\u00cdzes derelye"},
+        {"text": "Rakott kelk\u00e1poszta"}
+      ],
+      [
+        {},{},{},
+        {"text": "csirkemell"},
+        {},{}
+      ],
+      [
+        {"text": "F\u0151\u00e9tel"},
+        {"text": "K\u00f6rte"},
+        {"text": "Stef\u00e1nia vagdalt"},
+        {"text": "Rizi-bizi"},
+        {"text": "Porcukor sz\u00f3rat"},
+        {}
+      ],
+      [
+        {},{},
+        {"text": "f\u00e9lbarna keny\u00e9r"},
+        {"text": "K\u00e1posztasal\u00e1ta"},
+        {},{}
+      ]
+    ]
+  }
+]
