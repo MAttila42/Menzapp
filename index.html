@@ -9,21 +9,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Menzapp">
-    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-TileColor" content="#c6f9a5">
+    <meta name="theme-color" content="#49940b">
     <meta name="description" content="Győri középiskolák menzájának létrehozott web app">
-    <meta name="theme-color" content="#408508" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="/icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=lkvMpQ8b2r">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=lkvMpQ8b2r">
+    <link rel="icon" type="image/png" href="/icon.png?v=lkvMpQ8b2r">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=lkvMpQ8b2r">
+    <link rel="manifest" href="/site.webmanifest?v=lkvMpQ8b2r">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=lkvMpQ8b2r" color="#49940b">
+    <link rel="shortcut icon" href="/favicon.ico?v=lkvMpQ8b2r">
     <link rel="stylesheet" href="style.css">
 
     <script src="main.js"></script>
-    <!-- <script src="lunch.js"></script> -->
 
     <noscript>
         <link rel="stylesheet" href="noscript.css">
@@ -63,8 +62,7 @@
             </div>
             <div class="container">
                 <div class="aligner">
-                    <table class="close-button"
-                        onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
                         <td>×</td>
                     </table>
                 </div>
@@ -74,10 +72,8 @@
                         <td>Sötét téma:</td>
                         <td>
                             <div id="darkmode-btn" class="darkmode-btn">
-                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')"
-                                    class="line"></div>
-                                <table
-                                    onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
+                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
+                                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
                                     <td class="circle">
                                         <div class="small-circle"></div>
                                     </td>
@@ -95,14 +91,12 @@
                     </table>
                     <table class="info-line">
                         <td>Használt font:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans"
-                                class="link">Open Sans</a>
+                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
                         </td>
                     </table>
                     <table class="info-line">
                         <td>Ikonok:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/"
-                                class="link">Fontawesome</a></td>
+                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
                     </table>
                     <div class="text">
                         Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
@@ -137,8 +131,7 @@
             </div>
             <div class="container">
                 <div class="aligner">
-                    <table class="close-button"
-                        onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
                         <td>×</td>
                     </table>
                 </div>
@@ -148,10 +141,8 @@
                         <td>Sötét téma:</td>
                         <td>
                             <div id="darkmode-btn-phone" class="darkmode-btn">
-                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')"
-                                    class="line"></div>
-                                <table
-                                    onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
+                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
+                                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
                                     <td class="circle">
                                         <div class="small-circle"></div>
                                     </td>
@@ -169,14 +160,12 @@
                     </table>
                     <table class="info-line">
                         <td>Használt font:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans"
-                                class="link">Open Sans</a>
+                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
                         </td>
                     </table>
                     <table class="info-line">
                         <td>Ikonok:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/"
-                                class="link">Fontawesome</a></td>
+                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
                     </table>
                     <div class="text">
                         Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
