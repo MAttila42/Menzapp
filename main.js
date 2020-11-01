@@ -1,6 +1,6 @@
-var d = new Date();
+let d = new Date();
 
-var settings = {
+let settings = {
     "darkmode": localStorage.getItem("darkmode")
 }
 
@@ -32,8 +32,8 @@ function Load() {
 function LunchDisplay(x) {
     d.setDate(d.getDate() + x);
 
-    var today = d.getFullYear() + ". " + (d.getMonth() + 1).toString() + ". " + d.getDate() + ".";
-    var napok = {
+    let today = `${d.getFullYear()}. ${d.getMonth()}. ${d.getDate()}.`;
+    let napok = {
         0: "Vasárnap",
         1: "Hétfő",
         2: "Kedd",
@@ -42,7 +42,7 @@ function LunchDisplay(x) {
         5: "Péntek",
         6: "Szombat"
     }
-    var day = napok[d.getDay()]
+    let day = napok[d.getDay()]
 
     const doAjax = async () => {
         const response = await fetch('lunches.json');
@@ -52,33 +52,29 @@ function LunchDisplay(x) {
         } else return Promise.reject('JSON file not found');
     }
     doAjax().then((lunches) => {
-        var firstDay = Object.keys(lunches)[0];
-        var lastDay = Object.keys(lunches)[Object.keys(lunches).length - 1];
+        let firstDay = Object.keys(lunches)[0];
+        let lastDay = Object.keys(lunches)[Object.keys(lunches).length - 1];
 
-        document.getElementById("date").innerText = today + " " + day;
-        document.getElementById("lunch").innerText = lunches[today];
-
-        document.getElementById("date-phone").innerText = today + " " + day;
-        document.getElementById("lunch-phone").innerText = lunches[today];
+        setHTML("date", `${today} ${day}`);
+        setHTML("lunch", lunches[today]);
+        setHTML("date-phone", `${today} ${day}`);
+        setHTML("lunch-phone", lunches[today]);
 
         if (today == firstDay) {
-            document.getElementById("back").innerHTML = '<a></a>';
-            document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-
-            document.getElementById("back-phone").innerHTML = '<a></a>';
-            document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+            setHTML("back", '<a></a>');
+            setHTML("next", '<a class="useful" onclick="LunchDisplay(+1)"></a>');
+            setHTML("back-phone", '<a></a>');
+            setHTML("next-phone", '<a class="useful" onclick="LunchDisplay(+1)"></a>');
         } else if (today == lastDay) {
-            document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-            document.getElementById("next").innerHTML = '<a></a>';
-
-            document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-            document.getElementById("next-phone").innerHTML = '<a></a>';
+            setHTML("back", '<a class="useful" onclick="LunchDisplay(-1)"></a>');
+            setHTML("next", '<a></a>');
+            setHTML("back-phone", '<a class="useful" onclick="LunchDisplay(-1)"></a>');
+            setHTML("next-phone", '<a></a>');
         } else {
-            document.getElementById("back").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-            document.getElementById("next").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
-
-            document.getElementById("back-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(-1)"></a>';
-            document.getElementById("next-phone").innerHTML = '<a class="useful" onclick="LunchDisplay(+1)"></a>';
+            setHTML("back", '<a class="useful" onclick="LunchDisplay(-1)"></a>');
+            setHTML("next", '<a class="useful" onclick="LunchDisplay(+1)"></a>');
+            setHTML("back-phone", '<a class="useful" onclick="LunchDisplay(-1)"></a>');
+            setHTML("next-phone", '<a class="useful" onclick="LunchDisplay(+1)"></a>');
         }
     });
 }
@@ -95,4 +91,8 @@ function ToggleSetting(setting) {
         localStorage.setItem(setting, true);
         settings[setting] = "true";
     }
+}
+
+function setHTML(id, html) {
+    document.getElementById(id).innerHTML = html;
 }
