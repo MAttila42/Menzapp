@@ -2,195 +2,191 @@
 <html lang="hu">
 
 <head>
-    <title>Menzapp</title>
+  <title>Menzapp</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Menzapp">
-    <meta name="msapplication-TileColor" content="#c6f9a5">
-    <meta name="theme-color" content="#49940b">
-    <meta name="description" content="Győri középiskolák menzájának létrehozott web app">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Menzapp">
+  <meta name="msapplication-TileColor" content="#c6f9a5">
+  <meta name="theme-color" content="#49940b">
+  <meta name="description" content="Győri középiskolák menzájának létrehozott web app">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=lkvMpQ8b2r">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=lkvMpQ8b2r">
-    <link rel="icon" type="image/png" href="/icon.png?v=lkvMpQ8b2r">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=lkvMpQ8b2r">
-    <link rel="manifest" href="/site.webmanifest?v=lkvMpQ8b2r">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=lkvMpQ8b2r" color="#49940b">
-    <link rel="shortcut icon" href="/favicon.ico?v=lkvMpQ8b2r">
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=lkvMpQ8b2r">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=lkvMpQ8b2r">
+  <link rel="icon" type="image/png" href="/icon.png?v=lkvMpQ8b2r">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=lkvMpQ8b2r">
+  <link rel="manifest" href="/site.webmanifest?v=lkvMpQ8b2r">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=lkvMpQ8b2r" color="#49940b">
+  <link rel="shortcut icon" href="/favicon.ico?v=lkvMpQ8b2r">
+  <link rel="stylesheet" href="style.css">
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 
-    <noscript>
-        <link rel="stylesheet" href="noscript.css">
-    </noscript>
+  <noscript>
+    <link rel="stylesheet" href="noscript.css">
+  </noscript>
 </head>
 
 <body id="body" onload="Load()">
-    <div id="computer" class="computer flat">
-        <div class="big-card"></div>
-        <table class="aligner-table">
-            <td>
-                <h1>Mi az ebéd?</h1><br>
-                <p id="date">
-                    <span class="noscript">
-                        ¯\_(ツ)_/¯
-                    </span>
-                </p><br>
-                <div class="arrow" id="back"></div>
-                <div class="arrow" id="next"></div>
-            </td>
-            <td>
-                <p id="lunch">
-                    <span class="noscript">
-                        Nem sikerült betölteni a menüt. Nem tiltottad le véletlenül a JavaScriptet?
-                    </span>
-                </p>
-            </td>
+  <div id="computer" class="computer flat">
+    <div class="big-card"></div>
+    <table class="aligner-table">
+      <td>
+        <h1>Mi az ebéd?</h1><br>
+        <p id="date">
+          <span class="noscript">
+            ¯\_(ツ)_/¯
+          </span>
+        </p><br>
+        <div class="arrow" id="back"></div>
+        <div class="arrow" id="next"></div>
+      </td>
+      <td>
+        <p id="lunch">
+          <span class="noscript">
+            Nem sikerült betölteni a menüt. Nem tiltottad le véletlenül a JavaScriptet?
+          </span>
+        </p>
+      </td>
+    </table>
+    <table class="info-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+      <td>
+        <i class="fas fa-info-circle"></i>
+        <div>Információk</div>
+      </td>
+    </table>
+    <div id="info">
+      <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+      </div>
+      <div class="container">
+        <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+          <td>×</td>
         </table>
-        <table class="info-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+        <div class="title">Információk</div>
+        <div class="description">
+          <table class="info-line dm-btn-m">
+            <td>Sötét téma:</td>
             <td>
-                <i class="fas fa-info-circle"></i>
-                <div>Információk</div>
+              <div id="darkmode-btn" class="darkmode-btn">
+                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
+                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
+                  <td class="circle">
+                    <div class="small-circle"></div>
+                  </td>
+                </table>
+              </div>
             </td>
-        </table>
-        <div id="info">
-            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
-            </div>
-            <div class="container">
-                <div class="aligner">
-                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
-                        <td>×</td>
-                    </table>
-                </div>
-                <div class="title">Információk</div>
-                <div class="description">
-                    <table class="info-line dm-btn-m">
-                        <td>Sötét téma:</td>
-                        <td>
-                            <div id="darkmode-btn" class="darkmode-btn">
-                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
-                                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
-                                    <td class="circle">
-                                        <div class="small-circle"></div>
-                                    </td>
-                                </table>
-                            </div>
-                        </td>
-                    </table>
-                    <table class="info-line">
-                        <td>Készítette:</td>
-                        <td class="highlight">Menyhárt Attila</td>
-                    </table>
-                    <table class="info-line">
-                        <td>Forrás:</td>
-                        <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
-                    </table>
-                    <table class="info-line">
-                        <td>Használt font:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
-                        </td>
-                    </table>
-                    <table class="info-line">
-                        <td>Ikonok:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
-                    </table>
-                    <div class="text">
-                        Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
-                    </div>
-                </div>
-            </div>
+          </table>
+          <table class="info-line">
+            <td>Készítette:</td>
+            <td class="highlight">Menyhárt Attila</td>
+          </table>
+          <table class="info-line">
+            <td>Forrás:</td>
+            <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
+          </table>
+          <table class="info-line">
+            <td>Használt font:</td>
+            <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
+            </td>
+          </table>
+          <table class="info-line">
+            <td>Ikonok:</td>
+            <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
+          </table>
+          <div class="text">
+            Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
+          </div>
         </div>
+      </div>
     </div>
-    <div class="phone">
-        <table class="centerer">
-            <td>
-                <h1>Mi az ebéd?</h1>
-            </td>
+  </div>
+  <div class="phone">
+    <table class="centerer">
+      <td>
+        <h1>Mi az ebéd?</h1>
+      </td>
+    </table>
+    <table class="centerer">
+      <td>
+        <p id="lunch-phone"></p>
+      </td>
+    </table>
+    <p id="date-phone"></p><br>
+    <div class="arrow" id="back-phone"></div>
+    <div class="arrow" id="next-phone"></div>
+    <table class="info-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+      <td>
+        <i class="fas fa-info-circle"></i>
+        <!-- <img class="info-circle-solid" src="info-circle-solid.svg" alt="i"> -->
+        Információk
+      </td>
+    </table>
+    <div id="info-phone">
+      <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+      </div>
+      <div class="container">
+        <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
+          <td>×</td>
         </table>
-        <table class="centerer">
+        <div class="title">Információk</div>
+        <div class="description">
+          <table class="info-line dm-btn-m">
+            <td>Sötét téma:</td>
             <td>
-                <p id="lunch-phone"></p>
+              <div id="darkmode-btn-phone" class="darkmode-btn">
+                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
+                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
+                  <td class="circle">
+                    <div class="small-circle"></div>
+                  </td>
+                </table>
+              </div>
             </td>
-        </table>
-        <p id="date-phone"></p><br>
-        <div class="arrow" id="back-phone"></div>
-        <div class="arrow" id="next-phone"></div>
-        <table class="info-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
-            <td>
-                <i class="fas fa-info-circle"></i>
-                <!-- <img class="info-circle-solid" src="info-circle-solid.svg" alt="i"> -->
-                Információk
+          </table>
+          <table class="info-line">
+            <td>Készítette:</td>
+            <td class="highlight">Menyhárt Attila</td>
+          </table>
+          <table class="info-line">
+            <td>Forrás:</td>
+            <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
+          </table>
+          <table class="info-line">
+            <td>Használt font:</td>
+            <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
             </td>
-        </table>
-        <div id="info-phone">
-            <div class="background-close" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
-            </div>
-            <div class="container">
-                <div class="aligner">
-                    <table class="close-button" onclick="ToggleClass('info', 'show'), ToggleClass('info-phone', 'show')">
-                        <td>×</td>
-                    </table>
-                </div>
-                <div class="title">Információk</div>
-                <div class="description">
-                    <table class="info-line dm-btn-m">
-                        <td>Sötét téma:</td>
-                        <td>
-                            <div id="darkmode-btn-phone" class="darkmode-btn">
-                                <div onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')" class="line"></div>
-                                <table onclick="ToggleClass('body','darkmode'), ToggleClass('darkmode-btn', 'darkmode-btn-on'), ToggleClass('darkmode-btn-phone', 'darkmode-btn-on'), ToggleSetting('darkmode')">
-                                    <td class="circle">
-                                        <div class="small-circle"></div>
-                                    </td>
-                                </table>
-                            </div>
-                        </td>
-                    </table>
-                    <table class="info-line">
-                        <td>Készítette:</td>
-                        <td class="highlight">Menyhárt Attila</td>
-                    </table>
-                    <table class="info-line">
-                        <td>Forrás:</td>
-                        <td><a rel="noopener" target="_blank" href="http://gek.hu/" class="link">GMK</a></td>
-                    </table>
-                    <table class="info-line">
-                        <td>Használt font:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fonts.google.com/specimen/Open+Sans" class="link">Open Sans</a>
-                        </td>
-                    </table>
-                    <table class="info-line">
-                        <td>Ikonok:</td>
-                        <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
-                    </table>
-                    <div class="text">
-                        Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
-                    </div>
-                </div>
-            </div>
+          </table>
+          <table class="info-line">
+            <td>Ikonok:</td>
+            <td><a rel="noopener" target="_blank" href="https://fontawesome.com/" class="link">Fontawesome</a></td>
+          </table>
+          <div class="text">
+            Az oldal azon győri középiskolák étlapját mutatja, amik a GMK-tól kapják az ebédet.
+          </div>
         </div>
-
-        <div id="loading-shade">
-            <div class="loading-icon"></div>
-        </div>
+      </div>
     </div>
 
-    <script src="/upup.min.js"></script>
-    <script>
-        UpUp.start({
-            'content-url': 'index.html',
-            'assets': [
-                'lunches.json',
-                'main.js',
-                'style.css',
-            ]
-        });
-    </script>
-    <script src="https://kit.fontawesome.com/8790abaace.js" crossorigin="anonymous"></script>
+    <div id="loading-shade">
+      <div class="loading-icon"></div>
+    </div>
+  </div>
+
+  <script src="/upup.min.js"></script>
+  <script>
+    UpUp.start({
+      'content-url': 'index.html',
+      'assets': [
+        'lunches.json',
+        'main.js',
+        'style.css',
+      ]
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/8790abaace.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
